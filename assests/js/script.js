@@ -1,0 +1,1 @@
+alert("I am a new javascript file, please love me");

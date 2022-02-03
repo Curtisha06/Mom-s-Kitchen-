@@ -1,0 +1,16 @@
+/* Fonts */
+
+/* Variables */
+:root {
+    --transition: all 0.3s linear;
+    --spacing:0.25rem;
+    --radius: 0.3rem;
+}
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    background:var(--clr-white);
+    font-family:var(--ff-primary);
+}
