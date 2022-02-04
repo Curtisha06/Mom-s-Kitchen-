@@ -1,6 +1,7 @@
-function getApi() {
-    
-  var requestUrl = "https://api.spoonacular.com/recipes/findByIngredients?apiKey=5ebfc61359704b5c905090a0a4deaea6&ingredients=apple";
+function getRecipeByIngredients(ingredient) {
+    var apiKey="5ebfc61359704b5c905090a0a4deaea6";
+
+  var requestUrl = "https://api.spoonacular.com/recipes/findByIngredients?apiKey="+ apiKey+"&ingredients=" + ingredient;
 
   fetch(requestUrl)
     .then(function (response) {
@@ -8,12 +9,18 @@ function getApi() {
     })
     .then(function (data) {
       for (var i = 0; i < data.length; i++) {
-        var listItem = document.createElement("li");
-        listItem.textContent = data[i].html_url;
-        repoList.appendChild(listItem);
+       console.log(data[i])
       }
     });
 }
+function getInput(ingredient){
+    let queryUrl = "https://api.spoonacular.com/recipes/findByIngredients?apiKey=" + apiKey+ ingredient;
+}
+function searchBtn(){
+    
+}
 
-getApi();
-//5ebfc61359704b5c905090a0a4deaea6API
+getRecipeByIngredients("apple");
+getRecipeByIngredients("pickle");
+getRecipeByIngredients("cornstarch");
+
